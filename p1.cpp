@@ -6,7 +6,7 @@ void Pattern1(int n)
     {
         for (int j = 0; j < n; j++)
         {
-            cout << "*";
+            cout << "* ";
         }
         cout << endl;
     }
@@ -14,7 +14,15 @@ void Pattern1(int n)
 void Pattern2(int n){
     for(int i =0 ; i<n; i++){
         for(int j=0; j<=i; j++){
-            cout<<"*";
+            cout<<"* ";
+        }
+        cout<<endl;
+    }
+}
+void Pattern3(int n){
+    for(int i = 1; i<=n; i++){
+        for(int j = 1; j<=i; j++){
+            cout<<j<<" ";
         }
         cout<<endl;
     }
@@ -28,6 +36,6 @@ int main()
     {
         int n;
         cin >> n;
-        Pattern2(n);
+        Pattern3(n);
     }
 }
