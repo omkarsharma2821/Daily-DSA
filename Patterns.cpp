@@ -50,6 +50,22 @@ void Pattern6(int n){
         cout<<endl;
     }
 }
+void Pattern7(int n){
+    for(int i = 0; i<n; i++){
+        // space
+        for(int j = 0; j<n-i-1; j++){
+            cout<<" ";
+        }
+        //start
+            for(int j = 0; j<2*i+1; j++){
+                cout<<"*";
+            }
+            for(int j = 0; j<n-i-1; j++){
+            cout<<" ";
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     int x;
@@ -59,6 +75,6 @@ int main()
     {
         int n;
         cin >> n;
-        Pattern6(n);
+        Pattern7(n);
     }
 }
