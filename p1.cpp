@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-void printPattern(int n)
+void Pattern1(int n)
 {
     for (int i = 0; i < n; i++)
     {
@@ -11,10 +11,23 @@ void printPattern(int n)
         cout << endl;
     }
 }
+void Pattern2(int n){
+    for(int i =0 ; i<n; i++){
+        for(int j=0; j<=i; j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+}
 int main()
 {
     int x;
     cout << "Enter the value of x : " << endl;
     cin >> x;
-    printPattern(x);
+    for (int i = 0; i < x; i++)
+    {
+        int n;
+        cin >> n;
+        Pattern2(n);
+    }
 }
