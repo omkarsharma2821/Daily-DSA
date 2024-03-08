@@ -89,6 +89,6 @@ int main()
     {
         int n;
         cin >> n;
-        Pattern8(n);
+        Pattern7(n);
     }
 }
