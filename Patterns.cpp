@@ -115,6 +115,6 @@ int main()
     {
         int n;
         cin >> n;
-        Pattern2(n);
+        Pattern7(n);
     }
 }
