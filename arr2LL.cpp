@@ -27,12 +27,27 @@ Node* ConvertArr2LL(vector<int> &arr){
     }
     return head;
 }
-int main() {
-    vector<int> arr = {2,3,5,4,7,5};
-    Node* head = ConvertArr2LL(arr);
+void LLTraversal(Node* head){
     Node* temp = head;
     while(temp != nullptr){
         cout<<temp->data<<" ";
         temp = temp->next;
     }
+}
+int LengthOfLL(Node* head){
+    int count = 0;
+    Node* temp = head;
+    while(temp != nullptr){
+        count++;
+        temp = temp->next;
+    }
+    return count;
+}
+int main() {
+    vector<int> arr = {2,3,5,4,7,5};
+    Node* head = ConvertArr2LL(arr);
+    cout<<head->data<<endl;
+    LLTraversal(head);
+    cout<<endl;
+    cout<<LengthOfLL(head)<<endl;
 }
