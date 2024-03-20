@@ -28,7 +28,11 @@ Node* ConvertArr2LL(vector<int> &arr){
     return head;
 }
 int main() {
-    vector<int> arr = {200,3,5,4,7,5};
+    vector<int> arr = {2,3,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
-    cout<<head->data<<endl;
+    Node* temp = head;
+    while(temp != nullptr){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
 }
