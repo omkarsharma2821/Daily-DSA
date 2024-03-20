@@ -47,8 +47,10 @@ int LengthOfLL(Node* head){
 int main() {
     vector<int> arr = {2,3,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
-    cout<<head->data<<endl;
+    cout<<endl;
+    cout<<"Head of the List/array is: "<<head->data<<endl;
+    cout<<"Traversal of the List is: ";
     LLTraversal(head);
     cout<<endl;
-    cout<<LengthOfLL(head)<<endl;
+    cout<<"Length is: "<<LengthOfLL(head)<<endl;
 }
