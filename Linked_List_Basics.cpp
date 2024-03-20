@@ -44,7 +44,16 @@ int LengthOfLL(Node* head){
     }
     return count;
 }
+string SearchInLL(Node* head, int val){
+    Node* temp = head;
+    while(temp != nullptr){
+        if(temp->data == val) return "Present";
+        temp = temp->next;
+    }
+    return "Not Present";
+}
 int main() {
+    int val;
     vector<int> arr = {2,3,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
     cout<<endl;
@@ -53,4 +62,7 @@ int main() {
     LLTraversal(head);
     cout<<endl;
     cout<<"Length is: "<<LengthOfLL(head)<<endl;
+    cout<<"Enter the value to search: ";
+    cin>>val;
+    cout<<"Searching for 5: "<<SearchInLL(head, 5)<<endl;
 }
