@@ -38,7 +38,7 @@ void LLTraversal(Node* head){
 int LengthOfLL(Node* head){
     int count = 0;
     Node* temp = head;
-    while(temp != nullptr){
+    while(temp ){
         count++;
         temp = temp->next;
     }
