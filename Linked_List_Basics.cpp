@@ -72,5 +72,5 @@ int main() {
     cout<<"Enter the value to search: ";
     cin>>val;
     cout<<"Searching for "<<val<<" : "<<SearchInLL(head, val)<<endl;
-    cout<<"Linked List after deleting the head: "<<endl<<DeleteHead(head)->data<<endl;
+    cout<<"Linked List after deleting the head: "<<DeleteHead(head)->data<<endl;
 }
