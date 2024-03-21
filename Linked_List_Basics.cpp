@@ -92,7 +92,7 @@ Node* RemoveKthNode(Node* head, int k){
     return head;
 }
 int main() {
-    // int val;
+    int val;
     vector<int> arr = {2,9,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
     cout<<endl;
@@ -101,9 +101,9 @@ int main() {
     LLTraversal(head);
     cout<<endl;
     cout<<"Length is: "<<LengthOfLL(head)<<endl;
-    // cout<<"Enter the value to search: ";
-    // cin>>val;
-    cout<<"Searching for 5: "<<SearchInLL(head, 5)<<endl;
+    cout<<"Enter the value to search: ";
+    cin>>val;
+    cout<<"Searching for "<<val<<" : "<<SearchInLL(head, val)<<endl;
     cout<<"Linked List after deleting the head: "<<DeleteHead(head)->data<<endl;
     cout<<"Remove the kth node: "<<RemoveKthNode(head, 3)->data<<endl;
 }
