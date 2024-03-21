@@ -59,6 +59,16 @@ Node* DeleteHead(Node* head){
     delete temp;
     return head;
 }
+Node* DeleteTail(Node* head){
+    if(head == nullptr || head->next == nullptr) return NULL;
+    Node* temp = head;
+    while(temp->next->next != nullptr){
+        temp = temp->next;
+    }
+    delete temp->next;
+    temp->next = nullptr;   
+    return head;
+}
 int main() {
     int val;
     vector<int> arr = {2,9,5,4,7,5};
