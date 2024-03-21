@@ -69,8 +69,30 @@ Node* DeleteTail(Node* head){
     temp->next = nullptr;   
     return head;
 }
+Node* RemoveKthNode(Node* head, int k){
+    if(head == nullptr) return head;
+    if(k == 1){
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        return head;
+    }
+    int count = 0;
+    Node* prev = nullptr;
+    Node* temp = head;
+    while(temp != nullptr){
+        if(count == k){
+            prev->next = prev->next->next;
+            delete temp;
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+    return head;
+}
 int main() {
-    int val;
+    // int val;
     vector<int> arr = {2,9,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
     cout<<endl;
@@ -79,8 +101,9 @@ int main() {
     LLTraversal(head);
     cout<<endl;
     cout<<"Length is: "<<LengthOfLL(head)<<endl;
-    cout<<"Enter the value to search: ";
-    cin>>val;
-    cout<<"Searching for "<<val<<" : "<<SearchInLL(head, val)<<endl;
+    // cout<<"Enter the value to search: ";
+    // cin>>val;
+    cout<<"Searching for 5: "<<SearchInLL(head, 5)<<endl;
     cout<<"Linked List after deleting the head: "<<DeleteHead(head)->data<<endl;
+    cout<<"Remove the kth node: "<<RemoveKthNode(head, 3)->data<<endl;
 }
