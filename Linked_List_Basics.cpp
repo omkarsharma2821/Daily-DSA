@@ -52,9 +52,16 @@ string SearchInLL(Node* head, int val){
     }
     return "Not Present";
 }
+Node* DeleteHead(Node* head){
+    if(head == nullptr) return head;
+    Node* temp = head;
+    head = head->next;
+    delete temp;
+    return head;
+}
 int main() {
     int val;
-    vector<int> arr = {2,3,5,4,7,5};
+    vector<int> arr = {2,9,5,4,7,5};
     Node* head = ConvertArr2LL(arr);
     cout<<endl;
     cout<<"Head of the List/array is: "<<head->data<<endl;
@@ -64,5 +71,6 @@ int main() {
     cout<<"Length is: "<<LengthOfLL(head)<<endl;
     cout<<"Enter the value to search: ";
     cin>>val;
-    cout<<"Searching for 5: "<<SearchInLL(head, 5)<<endl;
+    cout<<"Searching for "<<val<<" : "<<SearchInLL(head, val)<<endl;
+    cout<<"Linked List after deleting the head: "<<endl<<DeleteHead(head)->data<<endl;
 }
