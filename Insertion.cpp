@@ -47,10 +47,21 @@ Node *convertarr2LL(vector<int> &arr)
     }
     return head;
 }
+Node* InsertionAtTail(Node* head , int val){
+    if(head == nullptr) return new Node(val);
+    Node* temp = head;
+    while(temp->next != nullptr){
+        temp = temp->next;
+    }
+    Node* newNode = new Node(val);
+    temp->next = newNode;
+    return head;
+}
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
     Node *head = convertarr2LL(arr);
     head = InsertionAtHead(head, 0);
+    head = InsertionAtTail(head, 6);
     printLL(head);
 }
