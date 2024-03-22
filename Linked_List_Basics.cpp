@@ -91,7 +91,26 @@ Node* RemoveKthNode(Node* head, int k){
     }
     return head;
 }
-
+Node* RemoveElement(Node* head, int val){
+    if(head == nullptr) return nullptr;
+    if(head->data == val){
+        Node* temp = head;
+        head = head->next;
+        delete temp;
+        return head;
+    }
+    Node* prev = nullptr;
+    Node* temp = head;
+    while(temp != nullptr){
+        if(temp->data == val){
+            prev->next = prev->next->next;
+            delete temp;
+            break;
+        }
+        prev = temp;
+        temp = temp->next;
+    }
+}
 int main() {
     int val;
     vector<int> arr = {2,9,5,4,7,5};
