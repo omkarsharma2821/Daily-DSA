@@ -5,19 +5,19 @@ class Node{
     public:
     int data;
     Node* next;
-    Node* prev;
+    Node* back;
 
     public:
-    Node(int data1, Node* next1, Node* prev1){
+    Node(int data1, Node* next1, Node* back1){
         data = data1;
         next = next1;
-        prev = prev1;
+        back = back1;
     }
     public:
     Node(int data1){
         data = data1;
         next = nullptr;
-        prev = nullptr;
+        back = nullptr;
     }
 };
 Node* convertArr2DLL(vector<int> &arr){
@@ -38,9 +38,21 @@ void printDLL(Node*head){
         temp = temp->next;
     }
 }
+Node* DeleteheadDLL(Node* head){
+    if(head == nullptr || head->next == nullptr) return NULL;
+    Node* temp = head;
+    head = head->next;
+    head->back = nullptr;
+    temp->next = nullptr;
+    delete temp;
+    return head;
+}
 int main(){
     vector<int> arr = {1,2,3,4,5,88,47};  
     Node* head = convertArr2DLL(arr);
+    printDLL(head);
+    cout<<endl;
+    head = DeleteheadDLL(head);
     printDLL(head);
     return 0;
 }
