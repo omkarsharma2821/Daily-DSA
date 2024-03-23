@@ -29,6 +29,7 @@ void printLL(Node *head)
         cout << temp->data << " ";
         temp = temp->next;
     }
+    cout<<endl;
 }
 Node *InsertionAtHead(Node *head, int val)
 {
@@ -62,6 +63,7 @@ int main()
     vector<int> arr = {1, 2, 3, 4, 5};
     Node *head = convertarr2LL(arr);
     head = InsertionAtHead(head, 0);
+    printLL(head);
     head = InsertionAtTail(head, 6);
     printLL(head);
 }
