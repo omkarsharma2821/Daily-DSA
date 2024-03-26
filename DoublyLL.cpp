@@ -47,12 +47,29 @@ Node* DeleteheadDLL(Node* head){
     delete temp;
     return head;
 }
+Node* DeleteTailinDLL(Node* head){
+    if(head == nullptr || head->next == nullptr){
+        return NULL;
+    }
+    Node* temp = head;
+    while(temp->next != nullptr){
+        temp  = temp->next;
+    }
+    Node* newtail = temp->back;
+    newtail->next = nullptr;
+    temp->back = nullptr;
+    delete temp;
+    return head;
+}
 int main(){
     vector<int> arr = {1,2,3,4,5,88,47};  
     Node* head = convertArr2DLL(arr);
     printDLL(head);
     cout<<endl;
     head = DeleteheadDLL(head);
+    printDLL(head);
+    cout<<endl;
+    head = DeleteTailinDLL(head);
     printDLL(head);
     return 0;
 }
