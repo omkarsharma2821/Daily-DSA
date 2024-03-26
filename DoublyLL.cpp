@@ -77,16 +77,16 @@ Node *DeleteTailinDLL(Node *head)
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5, 88, 47};
-    Node *head = convertArr2DLL(arr);
     cout <<"DLL Traversal : ";
+    Node *head = convertArr2DLL(arr);
     printDLL(head);
     cout<<endl;
-    head = DeleteheadDLL(head);
     cout <<"Delete head in DLL : ";
+    head = DeleteheadDLL(head);
     printDLL(head);
     cout << endl;
-    head = DeleteTailinDLL(head);
     cout <<"Delete tail in DLL : ";
+    head = DeleteTailinDLL(head);
     printDLL(head);
     return 0;
 }
