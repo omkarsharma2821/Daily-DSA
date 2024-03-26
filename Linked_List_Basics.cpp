@@ -81,6 +81,7 @@ Node* RemoveKthNode(Node* head, int k){
     Node* prev = nullptr;
     Node* temp = head;
     while(temp != nullptr){
+        count++;
         if(count == k){
             prev->next = prev->next->next;
             delete temp;
