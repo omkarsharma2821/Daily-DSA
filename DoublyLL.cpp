@@ -78,15 +78,15 @@ int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5, 88, 47};
     Node *head = convertArr2DLL(arr);
-    cout <<"DLL Traversal : " <<endl;
+    cout <<"DLL Traversal : ";
     printDLL(head);
     cout<<endl;
     head = DeleteheadDLL(head);
-    cout <<"Delete head in DLL : " <<endl;
+    cout <<"Delete head in DLL : ";
     printDLL(head);
     cout << endl;
     head = DeleteTailinDLL(head);
-    cout <<"Delete tail in DLL : " <<endl;
+    cout <<"Delete tail in DLL : ";
     printDLL(head);
     return 0;
 }
