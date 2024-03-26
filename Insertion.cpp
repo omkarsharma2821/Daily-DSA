@@ -58,6 +58,25 @@ Node* InsertionAtTail(Node* head , int val){
     temp->next = newNode;
     return head;
 }
+Node* InserteleAtKthNode(Node*head, int ele, int k){
+    if(head == nullptr) return new Node(ele);
+    if(k==1){
+        Node* temp = new Node(ele);
+        return temp;
+    }
+    int count = 0;
+    Node* temp = head;
+    while(temp != nullptr){
+        count++;
+        if(count == k-1){
+            Node* newnode = new Node(ele,head);
+            newnode->next = temp->next;
+            temp->next = newnode;
+        }
+        temp = temp->next;
+    }
+        return head;
+}
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};
@@ -65,5 +84,7 @@ int main()
     head = InsertionAtHead(head, 0);
     printLL(head);
     head = InsertionAtTail(head, 6);
+    printLL(head);
+    head = InserteleAtKthNode(head, 9, 3);
     printLL(head);
 }
