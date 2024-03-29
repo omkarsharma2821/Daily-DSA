@@ -10,6 +10,7 @@ int rotate(vector<int>&arr, int d){
     return arr;
 }
 int main() {
-    
+    int arr[5] = {1,2,3,4,5};
+    rotate(arr, 5);
     return 0;
 }
