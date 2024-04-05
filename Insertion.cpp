@@ -29,7 +29,7 @@ void printLL(Node *head)
         cout << temp->data << " ";
         temp = temp->next;
     }
-    cout<<endl;
+    cout << endl;
 }
 Node *InsertionAtHead(Node *head, int val)
 {
@@ -48,34 +48,42 @@ Node *convertarr2LL(vector<int> &arr)
     }
     return head;
 }
-Node* InsertionAtTail(Node* head , int val){
-    if(head == nullptr) return new Node(val);
-    Node* temp = head;
-    while(temp->next != nullptr){
+Node *InsertionAtTail(Node *head, int val)
+{
+    if (head == nullptr)
+        return new Node(val);
+    Node *temp = head;
+    while (temp->next != nullptr)
+    {
         temp = temp->next;
     }
-    Node* newNode = new Node(val);
+    Node *newNode = new Node(val);
     temp->next = newNode;
     return head;
 }
-Node* InserteleAtKthNode(Node*head, int ele, int k){
-    if(head == nullptr) return new Node(ele);
-    if(k==1){
-        Node* temp = new Node(ele);
+Node *InserteleAtKthNode(Node *head, int ele, int k)
+{
+    if (head == nullptr)
+        return new Node(ele);
+    if (k == 1)
+    {
+        Node *temp = new Node(ele);
         return temp;
     }
     int count = 0;
-    Node* temp = head;
-    while(temp != nullptr){
+    Node *temp = head;
+    while (temp != nullptr)
+    {
         count++;
-        if(count == k-1){
-            Node* newnode = new Node(ele,head);
+        if (count == k - 1)
+        {
+            Node *newnode = new Node(ele, head);
             newnode->next = temp->next;
             temp->next = newnode;
         }
         temp = temp->next;
     }
-        return head;
+    return head;
 }
 int main()
 {
