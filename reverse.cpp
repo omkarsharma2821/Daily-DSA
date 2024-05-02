@@ -24,6 +24,7 @@ void printarray(int arr[], int size)
 
 int main()
 {
+
     int i;
     int n;
     int arr[20] = {1, 2, 3, 4, 5, 0, 0, 0, 0, 0, 0, 0, 28};
