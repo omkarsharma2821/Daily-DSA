@@ -16,6 +16,21 @@ int Second_Largest(vector<int>arr, int n){
     }
     return seclargest;
 }
+int Second_Smallest(vector<int>arr, int n){
+    if(n<2) return -1;
+    int smallest = INT_MAX;
+    int secsmallest = INT_MAX;
+    for(int i = 0; i<n; i++){
+        if(arr[i]<smallest){
+            secsmallest = smallest;
+            smallest = arr[i];
+        }
+        else if(arr[i]<secsmallest && arr[i] != smallest){
+            secsmallest = arr[i];
+        }
+    }
+    return secsmallest;
+}
 
 int main(){
 int n;
@@ -28,4 +43,6 @@ for(int i = 0; i<n; i++){
 }
 int sL = Second_Largest(arr, n);
 cout<<"Second Largest element in the array is : "<<sL<<endl;
+int sS = Second_Smallest(arr, n);
+cout<<"Second Smallest element in the array is : "<<sS<<endl;
 }
