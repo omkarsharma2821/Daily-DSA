@@ -10,7 +10,7 @@ vector < int > FindUnion(int arr1[], int arr2[], int n, int m) {
       if (Union.size() == 0 || Union.back() != arr1[i])
         Union.push_back(arr1[i]);
       i++;
-    } else // case 3
+    } else
     {
       if (Union.size() == 0 || Union.back() != arr2[j])
         Union.push_back(arr2[j]);
