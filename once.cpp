@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 int FindOnceOtherTwice(vector<int> arr)
 {
     int n = arr.size();
