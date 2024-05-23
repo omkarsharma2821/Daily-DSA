@@ -2,7 +2,7 @@
 using namespace std;
 
 int MaxConsecutiveOne(int arr[], int n){
-    int cnt = 0;
+    int cnt = 0; 
     int maxi = 0;
     for(int i = 0; i<n; i++){
         if(arr[i] == 1){

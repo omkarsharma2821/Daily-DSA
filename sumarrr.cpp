@@ -3,7 +3,6 @@ using namespace std;
 int sum_of_element(int num[] , int n)
 {
     int sum = 0; 
-    // int i;
     for(int i = 0; i<n ; i++){
     sum = sum + num[i];
     }
