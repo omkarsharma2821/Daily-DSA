@@ -9,7 +9,6 @@ void RightRotate(int arr[], int n, int d){
     reverse(arr+n-d, arr+n);
     reverse(arr, arr+n);
 }
-
 void print(int arr[], int n){
     for(int i = 0; i<n; i++){
         cout<<arr[i]<<" ";
