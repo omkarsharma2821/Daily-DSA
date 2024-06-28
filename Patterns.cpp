@@ -106,7 +106,6 @@ void Pattern8(int n)
         cout << endl;
     }
 }
-
 void Pattern9(int n){
     for(int i = 0; i<n; i++){
         //space
