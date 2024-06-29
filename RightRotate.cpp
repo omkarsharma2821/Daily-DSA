@@ -2,7 +2,6 @@
 using namespace std;
 
 #include <algorithm>
-
 void RightRotate(int arr[], int n, int d){
     d = d%n;
     reverse(arr, arr+n-d);
