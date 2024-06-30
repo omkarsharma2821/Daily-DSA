@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 #include <algorithm>
 void RightRotate(int arr[], int n, int d){
     d = d%n;
