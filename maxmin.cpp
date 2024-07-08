@@ -1,6 +1,5 @@
 #include<iostream>
 using namespace std;
-
 int getmax(int num[],int size)
 {
     int max = INT8_MIN;
@@ -12,7 +11,6 @@ int getmax(int num[],int size)
     }
     return max;
 }
-
 int getmin(int num[], int size)
 {
     int min = INT8_MAX;
