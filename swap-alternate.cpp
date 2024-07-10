@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void swap_alternate(int arr[], int size)
 {
     int i=0;
