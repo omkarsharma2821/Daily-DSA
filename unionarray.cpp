@@ -17,7 +17,7 @@ vector < int > FindUnion(int arr1[], int arr2[], int n, int m) {
       j++;
     }
   }
-  while (i < n) // IF any element left in arr1
+  while (i < n) // IF any element left in arr1 
   {
     if (Union.back() != arr1[i])
       Union.push_back(arr1[i]);
