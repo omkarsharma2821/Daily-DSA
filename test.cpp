@@ -6,7 +6,6 @@ using namespace std;
 vector<int> solution(int N, vector<int> C) {
     stack<int> chocolateStack;
     vector<int> result;
-
     for (int i = 0; i < N; ++i) {
         if (C[i] == 0) {
             if (!chocolateStack.empty()) {
