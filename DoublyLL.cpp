@@ -14,7 +14,6 @@ public:
         next = next1;
         back = back1;
     }
-
 public:
     Node(int data1)
     {
