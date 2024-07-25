@@ -12,7 +12,6 @@ int main() {
     }
 
     set<int> seen;
-
     for (int i = 0; i < n; ++i) {
         while (seen.count(sequence[i])) {
             sequence[i]++;
