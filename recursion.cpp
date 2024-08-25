@@ -9,7 +9,7 @@ using namespace std;
 
 void print(int i, int n){
     if (i>n) return ;
-    cout<<"Omkar 💀"<<endl;
+    cout<<"Omkar"<<endl;
     print(i+1, n);
 }
 void printNto1(int i, int n){
@@ -17,10 +17,18 @@ void printNto1(int i, int n){
     cout<<i<<endl;
     printNto1(i-1, n);
 }
+void backtracking(int i, int n){
+    if(i<1) return;
+    backtracking(i-1, n);
+    cout<<i<<endl; 
+}
 
 int main(){
     int n;
     cin>>n;
     print(1,n);
+    cout<<endl;
     printNto1(n, n);
+    cout<<endl;
+    backtracking(n,n);
 }
