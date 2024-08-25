@@ -17,10 +17,10 @@ void printNto1(int i, int n){
     cout<<i<<endl;
     printNto1(i-1, n);
 }
-void backtracking(int i, int n){
-    if(i<1) return;
-    backtracking(i-1, n);
-    cout<<i<<endl; 
+void backtracking(int n){
+    if(n==0) return;
+    backtracking(n-1);
+    cout<<n<<endl; 
 }
 
 int main(){
@@ -30,5 +30,5 @@ int main(){
     cout<<endl;
     printNto1(n, n);
     cout<<endl;
-    backtracking(n,n);
+    backtracking(n);
 }
