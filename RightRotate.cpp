@@ -3,9 +3,9 @@ using namespace std;
 #include <algorithm>
 void RightRotate(int arr[], int n, int d){
     d = d%n;
-    reverse(arr, arr+n-d);
-    reverse(arr+n-d, arr+n);
     reverse(arr, arr+n);
+    reverse(arr, arr+d);
+    reverse(arr+d, arr+n);
 }
 void print(int arr[], int n){
     for(int i = 0; i<n; i++){
