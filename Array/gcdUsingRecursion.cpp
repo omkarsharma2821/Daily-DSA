@@ -14,5 +14,6 @@ int LCM(int a, int b){
 
 int main(){
     cout<<GCD(15,10)<<endl; // 5
-    cout<<LCM(15,10);       // 30
+    cout<<LCM(15,10)<<endl;       // 30
+    cout<< __gcd(11, 13); // inbuilt function to find gcd
 }
